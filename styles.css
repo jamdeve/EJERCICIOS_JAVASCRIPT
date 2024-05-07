@@ -70,7 +70,7 @@ body{
     background-color: #b57a22b8;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
     .calculadora{
         width: 70%;
     }
