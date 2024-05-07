@@ -41,6 +41,7 @@ body{
 .calculadora__boton{
     border-radius: 5px;
     font-size: 0.9rem;
+    color: inherit;
     padding: 1rem 0.5rem;
     border: 2px solid transparent;
     background-color: #d4f3ea92;
@@ -55,6 +56,11 @@ body{
     color: white;
     border: 2px solid white ;
     cursor: pointer;
+}
+
+.calculadora__boton:active{
+    border: 2px solid transparent;
+    background-color: #d4f3ea92;
 }
 
 .calculadora__boton--cero{
@@ -73,5 +79,16 @@ body{
 @media (max-width: 767px) {
     .calculadora{
         width: 70%;
+    }
+    .calculadora__boton:hover{
+        border: 2px solid transparent;
+        background-color: #d4f3ea92;
+        color: inherit;
+    }
+
+    .calculadora__boton:active{
+        background-color: #699c8c;
+        color: white;
+        border: 2px solid white ;
     }
 }
