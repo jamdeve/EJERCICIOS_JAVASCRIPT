@@ -91,4 +91,12 @@ body{
         color: white;
         border: 2px solid white ;
     }
+
+    .calculadora__boton--igual:hover{
+        background-color: #f7a62cb8;
+    }
+
+    .calculadora__boton--igual:active{
+        background-color: #b57a22b8;
+    }
 }
