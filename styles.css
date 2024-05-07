@@ -69,3 +69,9 @@ body{
 .calculadora__boton--igual:hover{
     background-color: #b57a22b8;
 }
+
+@media screen and (max-width: 767px) {
+    .calculadora{
+        width: 70%;
+    }
+}
