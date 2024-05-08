@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Modak&display=swap');
+
+:root{
+    --color-sidebar:#ffffff69;
+
+    --color-text:white;
+    --color-text-menu: rgb(61, 61, 61);
+    --color-text-menu-hover: black;
+
+    --color-button:rgba(255, 255, 255, 0.908);
+    --color-button-text:black;
+
+    --color-line: rgba(255, 255, 255, 0.219);
+    --color-tittle: black;
+
+    --color-logo: black;
+    --color-base-switch: black;
+    --color-circle-switch: white;
+    --postion-circle-switch: 2px;
+}
+
+.darkmode{
+    --color-sidebar:#00000069;
+
+    --color-text:rgb(0, 0, 0);
+    --color-text-menu: rgb(231, 231, 231);
+
+    --color-button:rgba(0, 0, 0, 0.908);
+    --color-button-text:rgb(255, 255, 255);
+
+    --color-line: rgba(255, 255, 255, 0.219);
+    --color-tittle: white;
+    --color-logo: white;
+    --color-text-menu-hover: white;
+
+    --color-base-switch: white;
+    --color-circle-switch: black;
+    --postion-circle-switch: 15.5px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+    background-image: linear-gradient(90deg, #bc4e9c,#f80759);
+}
+
+.sidebar{
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color: var(--color-sidebar);
+    transition: width 0.5s ease;
+}
+
+
+.sidebar--mini{
+    width: 80px;
+}
+
+/* NAME PAGE */
+.sidebar__namepage{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sidebar__namepage ion-icon{
+    min-width: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    color: var(--color-logo);
+}
+
+.sidebar__namepage .NameLogo{
+    font-size: 25px;
+    font-family: "Concert One", sans-serif;
+    margin-left: 5px;
+    color: var(--color-tittle);
+}
+
+.sidebar span{
+    text-align: left;
+    opacity: 1;
+    width: 100px;
+    transition: opacity,width, 0.5s;
+    text-wrap:nowrap;
+}
+
+.sidebar nav span
+{
+    font-size: 18px;
+}
+
+.sidebar span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+
+/* BOTON */
+.sidebar__button{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-button);
+    color: var(--color-button-text);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.sidebar__button:hover{
+    opacity: 0.6;
+}
+
+.sidebar__button ion-icon{
+    min-width: 50px;
+    font-size: 25px;
+
+}
+
+/* NAV MENU */
+
+.sidebar .nav li{
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+
+}
+
+.sidebar .nav a{
+    width: 100%;
+    height: 45px;
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--color-text-menu);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .nav a:hover{
+    background-color: var(--color-sidebar);
+    color: var(--color-text-menu-hover);
+    
+}
+
+.sidebar .nav ion-icon{
+    min-width: 50px;
+    font-size: 20px;
+}
+
+/* LINE */
+
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-line);
+}
+
+/* DARK MODE */
+
+.sidebar__darkmode{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sidebar__darkmode__info{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-menu);
+
+}
+
+.sidebar__darkmode__info ion-icon{
+    width: 50px;
+    font-size: 20px;
+
+}
+
+/* SWITCH */
+
+.sidebar__darkmode__switch{
+    min-width: 50px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.switch__base{
+    width: 35px;
+    height: 20px;
+    background-color: var(--color-base-switch);
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.switch__circle{
+    width: 18px;
+    height: 90%;
+    background-color: var(--color-circle-switch);
+    border-radius: 50%;
+    position: absolute;
+    left: var(--postion-circle-switch);
+    transition: left 0.3s ease;;
+
+}
+
+/* USSER */
+
+.sidebar__usser{
+    width: 100%;
+    display: flex;
+}
+
+.sidebar__usser img{
+    width: 50px;
+    min-width: 50px;
+    border-radius: 10px;
+}
+
+.sidebar__usser__info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.usser__name-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.usser__name{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.usser__email{
+    font-size: 15px;
+}

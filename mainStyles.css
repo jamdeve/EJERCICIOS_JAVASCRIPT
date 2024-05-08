@@ -34,6 +34,7 @@ body
     text-align: center;
     min-width: 200px;
     max-width: 20svw;
+    min-height: 250px;
     background-color: rgba(240, 255, 255, 0.323);
     border-radius: 10px;
     text-decoration: none;
@@ -52,6 +53,7 @@ body
 .proyectos__item img{
     max-width: 50%;
     border-radius: 10px;
+    
 }
 
 @media (max-width: 767px){
