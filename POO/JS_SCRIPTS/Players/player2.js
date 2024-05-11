@@ -1,0 +1,2 @@
+
+let Coins = 0;

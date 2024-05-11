@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100svh;
+    background-image: linear-gradient(90deg, #ff00cc, #333399);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lexend", sans-serif;
+}
+
+.tareas{
+    width: 90%;
+    max-width: 600px;
+    height: 80%;
+    background-image: linear-gradient(130deg,#ef32d9,#89fffd);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.464);
+    display: flex;
+    flex-direction: column;
+}
+
+.tareas__container{
+    flex: 5;
+    overflow-y: auto;
+}
+
+.tareas h1{
+    margin: 10px 0 10px 0;
+    color: white;
+    text-align: center;
+}
+
+.line{
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background-color: #ffffff83;
+}
+
+.tareas__add{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: linear-gradient(90deg, #42adf5a1,#6DD5FA);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    max-width: 60%;
+    cursor: pointer;
+}
+
+.tareas__add:hover{
+    background-image: linear-gradient(90deg, #1c6596af,#397f999e);
+}
+
+.tareas__add:active{
+    background-image: linear-gradient(90deg, #42adf5a1,#6DD5FA);
+}
+
+.tareas__item{
+    margin-top: 10px;
+    background-image: linear-gradient(90deg,hsl(306, 96%, 82%),#90f0ff 80%);
+    background-size: 200%;
+    animation: shine-invert 0.5s linear;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px 10px;
+    justify-content: space-between;
+    transition: all 1s;
+}
+
+.tareas__item form{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tareas__item button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.tareas__item input[type="text"]
+{
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    font-weight: bold;
+    background-color: transparent;
+    font-family: "Lexend", sans-serif;
+    color: black;
+    width: 70%;
+}
+
+.tareas__item input[type="text"]:focus
+{
+    outline: none;
+}
+
+.tareas__item--completed{
+    animation: shine 1s linear;
+    background-image: linear-gradient(90deg,#fbd4f7,#77ff9d 80%);
+}
+
+/* Estilos opcionales para el botón de check */
+.tareas__item input[type="checkbox"] {
+    /* Estilos para ocultar el input checkbox */
+    display: none;
+}
+
+/* Estilos para personalizar la apariencia del botón de check */
+.tareas__item input[type="checkbox"] + label {
+    cursor: pointer;
+    /* Estilos para el contenedor del botón de check */
+}
+
+/* Estilos para el check visual */
+.tareas__item input[type="checkbox"] + label:before {
+    content: ''; /* Unicode para el símbolo de check */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1.1em; /* Alinea verticalmente el contenido */
+    vertical-align: middle; /* Centra verticalmente el pseudo-elemento */
+    left: 0.5em;
+    color: #fff;
+    font-size: 25px;
+    border: 1px solid #ffffff; /* Cambia el color del borde según sea necesario */
+    border-radius: 3px; /* Ajusta el radio de borde según sea necesario */
+    text-align: center;
+    background-color: #fff; /* Cambia el color de fondo según sea necesario */
+    transform: rotate(0deg);
+    transition: all 0.5s;
+}
+
+/* Estilos para el check visual cuando está marcado */
+.tareas__item input[type="checkbox"]:checked + label:before {
+    content: '\2714';
+    transform: rotate(360deg);
+    background-image: linear-gradient(#a8ff78,#78ffd6);
+    color: #fff; /* Cambia el color del símbolo cuando está marcado según sea necesario */
+}
+
+
+/* ANIMATION */
+
+@keyframes shine{
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes shine-invert{
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+@media (max-width: 767px){
+    .tareas{
+        width: 90%;
+    }
+}
