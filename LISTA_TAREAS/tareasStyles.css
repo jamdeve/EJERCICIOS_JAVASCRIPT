@@ -32,6 +32,19 @@ body{
     overflow-y: auto;
 }
 
+.tareas__container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.tareas__container::-webkit-scrollbar-track {
+    background-color: #04deff92;
+}
+
+.tareas__container::-webkit-scrollbar-thumb {
+    background-color: #fefefee5; 
+    border-radius: 5px; 
+}
+
 .tareas h1{
     margin: 10px 0 10px 0;
     color: white;
@@ -113,9 +126,8 @@ body{
     background-image: linear-gradient(90deg,#fbd4f7,#77ff9d 80%);
 }
 
-/* Estilos opcionales para el botón de check */
+
 .tareas__item input[type="checkbox"] {
-    /* Estilos para ocultar el input checkbox */
     display: none;
 }
 
@@ -167,9 +179,19 @@ body{
     }
 }
 
+/* MEDIA QUERIES */
 
 @media (max-width: 767px){
     .tareas{
         width: 90%;
     }
+
+    .tareas__add:active{
+        background-image: linear-gradient(90deg, #1c6596af,#397f999e);
+    }
+    
+    .tareas__add:hover{
+        background-image: linear-gradient(90deg, #42adf5a1,#6DD5FA);
+    }
+
 }
