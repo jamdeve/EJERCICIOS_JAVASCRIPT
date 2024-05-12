@@ -149,6 +149,65 @@ h1{
     max-width: 100%;
 }
 
+/* END GAME */
+
+.windowEndGame{
+    background-color: rgba(128, 128, 128, 0.832);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.windowEndGame_Container{
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: relative;
+    width: 50%;
+    height: 30%;
+    color: azure;
+    align-content: center;
+}
+
+.windowEndGame_Container h2{
+    color: black;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.windowEndGame_Container span
+{
+    font-size: 25px;
+}
+
+.windowEndGame_Container a{
+    text-align: center;
+    background-color: rgb(161, 161, 161);
+    padding: 20px;
+    border: 1px solid black;
+    display: block;
+    border-radius: 5px;
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.windowEndGame_Container a:hover{
+    background-color: rgba(161, 161, 161, 0.444);
+}
+
 
 @media (max-width: 767px){
     .battle{
@@ -178,6 +237,10 @@ h1{
         bottom: 20px;
         background-color: rgba(255, 255, 255, 0.712);
         box-shadow: 0 0 20px 2px white;
+    }
+
+    .windowEndGame_Container a{
+        width: 80%;
     }
 
 }

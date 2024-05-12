@@ -15,6 +15,11 @@ const imgTijeras = "Imagenes/Tijeras.png";
 const battleContainerPlayer = document.getElementById("battleContainerPlayer");
 const battleContainerCom = document.getElementById("battleContainerCom");
 
+const windowEndGame = document.getElementById("windowEndGame");
+const windowEndGame__puntuacion = document.getElementById("windowEndGame__puntuacion");
+const windowEndGame__restart = document.getElementById("windowEndGame__restart");
+const windowEndGame_Container__titulo = document.getElementById("windowEndGame_Container__titulo");
+
 
 const options = {
     None: 0,
@@ -29,6 +34,12 @@ let ComSelectedOption = options.None;
 let playerScore = 0;
 let comScore = 0;
 
+windowEndGame__restart.addEventListener("click", (event) => {
+    playerScore = 0;
+    comScore = 0;
+    updateTextScore();
+    reset();
+}) 
 
 optionsElement.addEventListener("click",(event) => {
     if (PlayerSelectedOption != options.None) return;
@@ -115,7 +126,24 @@ function playRound()
     }
     updateTextScore();
 
-    setTimeout(reset, 1300);
+    if (comScore === 3 || playerScore === 3)
+    {
+        windowEndGame.style.display = "flex";
+        windowEndGame__puntuacion.textContent = `${playerScore} : ${comScore}`
+        if (comScore === 3)
+        {
+            windowEndGame_Container__titulo.textContent = "¡HAS PERDIDO!";
+        }
+        else
+        {
+            windowEndGame_Container__titulo.textContent = "¡HAS GANADO!";
+        }
+    }
+    else
+    {
+        setTimeout(reset, 1300);
+    }
+    
 
 }
 
@@ -142,6 +170,7 @@ function empate()
 
 function reset()
 {
+    windowEndGame.style.display = "none";
     PlayerSelectedOption = options.None;
     ComSelectedOption = options.None;
     imgBattlePlayer.setAttribute("src",imgEligiendo);
