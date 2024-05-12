@@ -157,7 +157,7 @@ h1{
     height: 100vh;
     position: absolute;
     z-index: 20;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -237,6 +237,10 @@ h1{
         bottom: 20px;
         background-color: rgba(255, 255, 255, 0.712);
         box-shadow: 0 0 20px 2px white;
+    }
+
+    .windowEndGame_Container{
+        width: 80%;
     }
 
     .windowEndGame_Container a{
