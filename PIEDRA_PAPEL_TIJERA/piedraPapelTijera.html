@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIEDRA,PAPEL,TIJERAS</title>
+    <link rel="stylesheet" href="piedraPapelTijeraStyles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>PIEDRA, PAPEL, TIJERAS</h1>
+        <div class="puntuacion__container">
+            <div class="puntuacion__item puntuacion__player">
+                <img src="Imagenes/PlayerLogo.png" alt="">
+                <h2 id="puntuacion__player">0</h2>
+            </div>
+            <h2>:</h2>
+            <div class="puntuacion__item puntuacion__com">
+                <h2 id="puntuacion__com">0</h2>
+                <img src="Imagenes/ComLogo.png" alt="">
+            </div>
+        </div>
+        <div class="battle">
+            <div class="battle__container battle__container--player" id="battleContainerPlayer">
+                <img id="imgBattlePlayer" src="Imagenes/ELIGIENDO.png" alt="" srcset="">
+            </div>
+            <img class="vs" src="Imagenes/VS.png" alt="">
+            <div class="battle__container battle__container--com" id="battleContainerCom">
+                <img id="imgBattleCom" src="Imagenes/ELIGIENDO.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="options" id="options">
+            <ul class="options__list">
+                <li class="options__item">
+                    <a href="#">
+                        <img id="piedra__option" src="Imagenes/Piedra.png" alt="">
+                    </a>
+                </li>
+                <li class="options__item">
+                    <a href="#">
+                        <img id="papel__option" src="Imagenes/Papel.png" alt="">
+                    </a>
+                </li>
+                <li class="options__item">
+                    <a href="#">
+                        <img id="tijeras__option" src="Imagenes/Tijeras.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="piedraPapelTijeraSystem.js"></script>
+</body>
+</html>
