@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX</title>
+    <link rel="stylesheet" href="pokedexStyles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>BURCADOR DE POKÉMON</h1>
+
+        <div class="cards">
+            <div class="card one">
+                <div class="card__buscar">
+                    <input id="pokemonInput1" type="text" placeholder="Nombre o Número de Pokemón"> <br>
+                    <button onclick="buscarPokemon(1)"><box-icon name='search' ></box-icon></button>
+                </div>
+                
+                <div class="pokemoninfo" id="pokemonInfo1"></div>
+            </div>
+            <div class="card two">
+                <div class="card__buscar">
+                    <input id="pokemonInput2" type="text" placeholder="Nombre o Número de Pokemón"> <br>
+                    <button onclick="buscarPokemon(2)"><box-icon name='search' ></box-icon></button>
+                </div>
+                <div class="pokemoninfo" id="pokemonInfo2"></div>
+            </div>
+
+            <div class="card three">
+                <div class="card__buscar">
+                    <input id="pokemonInput3" type="text" placeholder="Nombre o Número de Pokemón"> <br>
+                    <button onclick="buscarPokemon(3)"><box-icon name='search' ></box-icon></button>
+                </div>
+                <div class="pokemoninfo" id="pokemonInfo3"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pokedex.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
+
+
+
