@@ -1,19 +1,27 @@
 
-function buscarPokemon(numeroContenedor)
+async function buscarPokemon(numeroContenedor)
 {
     let inputId = document.getElementById(`pokemonInput${numeroContenedor}`);
     let nombrePokemon = inputId.value.trim().toLowerCase();
     let urlApi = `https://pokeapi.co/api/v2/pokemon/${nombrePokemon}`;
-    fetch(urlApi)
-    .then(response => response.json())
-    .then(datosPokemon => mostrarPokemon(datosPokemon, numeroContenedor))
-    .catch(() => mostrarError(numeroContenedor,nombrePokemon))
+
+    let card = document.getElementById(`card${numeroContenedor}`);
+    card.classList.add("card--loading");
+    try {
+        let response = await fetch(urlApi);
+        let datos = await response.json();
+        
+        mostrarPokemon(datos, numeroContenedor);
+        card.classList.remove("card--loading");
+    } catch (error) {
+        mostrarError(numeroContenedor, nombrePokemon);
+    }
+    
 }
 
 function mostrarPokemon(datosPokemon,numeroContenedor)
 {
     let infoDiv = document.getElementById(`pokemonInfo${numeroContenedor}`);
-
     infoDiv.innerHTML = `
     <h2 class="pk-name">${datosPokemon.name.toUpperCase()}</h2>
     <img class="pk-img" src="${datosPokemon.sprites.other["official-artwork"].front_default}">
