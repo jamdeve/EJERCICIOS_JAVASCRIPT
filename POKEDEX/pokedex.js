@@ -7,6 +7,7 @@ async function buscarPokemon(numeroContenedor)
 
     let card = document.getElementById(`card${numeroContenedor}`);
     card.classList.add("card--loading");
+
     try {
         let response = await fetch(urlApi);
         let datos = await response.json();
